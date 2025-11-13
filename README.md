@@ -1,6 +1,6 @@
-# Ejemplo_1: ESP-IDF LED Blink with FreeRTOS
+# ESP-IDF LED Blink con FreeRTOS
 
-Pequeño proyecto de ejemplo para ESP-IDF que parpadea un LED e imprime "Hola Mundo" en la consola serial.
+Pequeño proyecto de ejemplo para ESP-IDF que parpadea un LED e imprime "Hola Mundo" en la consola serial. 
 
 ##  Requisitos
 
