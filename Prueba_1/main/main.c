@@ -4,15 +4,17 @@
 #include "driver/gpio.h"
 #include "sdkconfig.h"
 
+#define LED 2
+
 void app_main(void)
 {
-    gpio_set_direction(GPIO_NUM_2 ,GPIO_MODE_OUTPUT);
+    gpio_set_direction(LED,GPIO_MODE_OUTPUT);
     while (1)
     {
         printf("Hola Mundo\n");
-        gpio_set_level(GPIO_NUM_2 ,1);
+        gpio_set_level(LED,1);
         vTaskDelay(pdMS_TO_TICKS(1000)); 
-        gpio_set_level(GPIO_NUM_2 ,0);
+        gpio_set_level(LED,0);
         vTaskDelay(pdMS_TO_TICKS(1000)); 
 
     }
