@@ -30,4 +30,5 @@ idf.py -p COM3 flash monitor
 ```powershell
 idf.py fullclean
 ```
+.
 
