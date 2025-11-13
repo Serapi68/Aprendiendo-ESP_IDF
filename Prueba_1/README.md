@@ -1,32 +1,36 @@
-# _Sample project_
+# _PRIMER CODIGO_
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
-
-This is the simplest buildable example. The example is used by command `idf.py create-project`
-that copies the project to user specified path and set it's name. For more information follow the [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)
+Primer paso para aprender a programar en ESP_IDF, inicializacion con configuracion de GPIO, uso de bibliotecas FreeRTOS y comunicación con monitor.
 
 
 
-## How to use example
-We encourage the users to use the example as a template for the new projects.
-A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
+## SECUENCIA DE CODIGO
+El codigo se ponen las librerias:
 
-## Example folder contents
+    #include <stdio.h>
+    #include "freertos/FreeRTOS.h"
+    #include "freertos/task.h"
+    #include "driver/gpio.h"
+    #include "sdkconfig.h"
 
-The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
+Se abre bucle app_main(void), como inicio de proceso se setea el modo de salida del GPIO
 
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
-files that provide set of directives and instructions describing the project's source files and targets
-(executable, library, or both). 
+    void app_main(void)
+    {
+        gpio_set_direction(GPIO_NUM_2 ,GPIO_MODE_OUTPUT);
 
-Below is short explanation of remaining files in the project folder.
+## SECUENCIA DE ACCION 
 
-```
-├── CMakeLists.txt
-├── main
-│   ├── CMakeLists.txt
-│   └── main.c
-└── README.md                  This is the file you are currently reading
-```
-Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
-They are not used or needed when building with CMake and idf.py.
+La secuencia es sencilla, iniciamos con un print en el monitor para visualización del codigo y posible depuración o comprobación de un correcto _"flash"_ hacia el esp_32, luego con ayuda de las funciones de timers variamos el tiempo de encendido y apagado de nuestro GPIO 2, que en esp_32 tiene 
+un led integrado.
+
+    while (1)
+    {
+        printf("Hola Mundo\n");
+        gpio_set_level(GPIO_NUM_2 ,1);
+        vTaskDelay(pdMS_TO_TICKS(1000)); 
+        gpio_set_level(GPIO_NUM_2 ,0);
+        vTaskDelay(pdMS_TO_TICKS(1000)); 
+
+    }
+    
