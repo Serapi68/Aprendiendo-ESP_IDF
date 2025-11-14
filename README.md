@@ -1,34 +1,14 @@
-# ESP-IDF LED Blink con FreeRTOS
+# Pruebas en ESP_IDF
 
-Pequeño proyecto de ejemplo para ESP-IDF que parpadea un LED e imprime "Hola Mundo" en la consola serial. 
+Pequeño repositorio con ejemplos y practicas programando en ESP_IDF
 
-##  Requisitos
+##  Objetivos
 
-- ESP-IDF instalado y configurado en PATH
-- Python 3.7+
-- Herramientas de compilación (gcc, make)
-- Puerto COM disponible para la placa ESP32
+- Amplliar conocimientos en programación en sistemas embebidos.
+- Uso de dicversas herramientas.
+- Escala a futuro de otros microcontroladores
 
-##  Inicio rápido
+##  Proceso:
 
-### Configurar opciones de compilación:
-```powershell
-idf.py menuconfig
-```
-
-### Compilar el proyecto:
-```powershell
-idf.py build
-```
-
-### Grabar y abrir monitor serial (reemplaza COM3 con tu puerto):
-```powershell
-idf.py -p COM3 flash monitor
-```
-
-### Limpiar artefactos de compilación:
-```powershell
-idf.py fullclean
-```
-.
+Iniciación de proyectos básicos buscando una mejor optimización trabajando en este entorno FreeRTOS remplazando los IDE como Arduino IDE, y explorar las capacidades disponibles.
 
