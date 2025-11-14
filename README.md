@@ -4,7 +4,7 @@ Pequeño repositorio con ejemplos y practicas programando en ESP_IDF
 
 ##  Objetivos
 
-- Amplliar conocimientos en programación en sistemas embebidos.
+- Ampliar conocimientos en programación en sistemas embebidos.
 - Uso de dicversas herramientas.
 - Escala a futuro de otros microcontroladores
 
