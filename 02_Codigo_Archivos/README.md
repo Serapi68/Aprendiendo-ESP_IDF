@@ -39,6 +39,6 @@ En el archivo _CMakeLists.txt_ de la carpeta _main_ se tendrán que declarar los
 
 ## VIDEO:
 
-<video src="Videos/Prueba_Segundo.mp4" controls width="600">
-</video>
+![Prueba](Videos/Prueba_Segundo.mp4)
+
 
