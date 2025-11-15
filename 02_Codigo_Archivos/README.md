@@ -39,6 +39,6 @@ En el archivo _CMakeLists.txt_ de la carpeta _main_ se tendrán que declarar los
 
 ## VIDEO:
 
-<video src="Videos/Prueba_Segundo.mp4" controls width="600">
-</video>
+
+https://github.com/user-attachments/assets/a3a138ec-0456-4ed1-9391-34157a6d73a0
 
