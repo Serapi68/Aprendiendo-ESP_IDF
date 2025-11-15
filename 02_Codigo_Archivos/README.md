@@ -39,6 +39,8 @@ En el archivo _CMakeLists.txt_ de la carpeta _main_ se tendrán que declarar los
 
 ## VIDEO:
 
+https://github.com/user-attachments/assets/d8389bc8-1398-4551-aa6b-978b7e94e874
 
-https://github.com/user-attachments/assets/a3a138ec-0456-4ed1-9391-34157a6d73a0
+
+
 
