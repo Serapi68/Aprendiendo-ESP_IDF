@@ -38,7 +38,6 @@ En el archivo _CMakeLists.txt_ de la carpeta _main_ se tendrán que declarar los
                     INCLUDE_DIRS ".")
 
 ## VIDEO:
+![Prueba](Videos/Prueba_Segundo.mp4)
 
-<video src="Videos/Prueba_Segundo.mp4" controls width="600">
-</video>
 
