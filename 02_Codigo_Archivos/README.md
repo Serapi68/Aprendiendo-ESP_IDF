@@ -1,35 +1,44 @@
-# _PRIMER CÓDIGO_
+# _SEGUNDO CÓDIGO_
 
-Primer paso para aprender a programar en ESP_IDF, inicialización con configuración de GPIO, uso de bibliotecas FreeRTOS y comunicación con monitor.
+Segundo paso, división de varias funciones por diversos archivos
 
 ## SECUENCIA DE CÓDIGO
 
-El código se ponen las librerías:
+Se han usado dos archivos para definir secuencias:
+    
+    un_led.c
+    varios_led.c
 
-    #include <stdio.h>
-    #include "freertos/FreeRTOS.h"
-    #include "freertos/task.h"
-    #include "driver/gpio.h"
-    #include "sdkconfig.h"
+Se hace una cabecera de las mismas funciones
+    
+    un_led.h
+    varios_led.h
 
-Se abre bucle app_main(void), como inicio de proceso se setea el modo de salida del GPIO
+Se llaman las cabeceras en _main.c_:
+    
+    #include "un_led.h"
+    #include "varios_led.h"
 
-    void app_main(void)
-    {
-        gpio_set_direction(GPIO_NUM_2 ,GPIO_MODE_OUTPUT);
+Por último se ponen en la secuencia de main:
+        
+        if (boton_estado == 0)
+        {
+            configurar_leds();
+        }
+        else
+        {
+            manejo_led();
+        }
 
-## SECUENCIA DE ACCIÓN 
+## CÓMO FUNCIONA EL BUILD_ESP_IDF
 
-La secuencia es sencilla, iniciamos con un print en el monitor para visualización del código y posible depuración o comprobación de un correcto _"flash"_ hacia el ESP_32, luego con ayuda de las funciones de timers variamos el tiempo de encendido y apagado de nuestro GPIO 2, que en ESP_32 tiene 
-un LED integrado.
+En el archivo _CMakeLists.txt_ de la carpeta _main_ se tendrán que declarar los archivos que queremos incluir en el _build_ de esp_idf, si no se hace esto cuando queramos flashear en nuestra ESP_32 no se podrá, ejemplo:
+    
+    idf_component_register(SRCS "main.c" "varios_led.c" "un_led.c"
+                    INCLUDE_DIRS ".")
 
-    while (1)
-    {
-        printf("Hola Mundo\n");
-        gpio_set_level(GPIO_NUM_2 ,1);
-        vTaskDelay(pdMS_TO_TICKS(1000)); 
-        gpio_set_level(GPIO_NUM_2 ,0);
-        vTaskDelay(pdMS_TO_TICKS(1000)); 
+## VIDEO:
 
-    }
+<video src="Videos/Prueba_Segundo.mp4" controls width="600">
+</video>
 
