@@ -35,3 +35,12 @@ Cuando ambas tareas se ejecutan concurrentemente, crean una secuencia sincroniza
 - Usa vTaskDelay() para ceder control a otras tareas
 - El scheduler de FreeRTOS cambia entre tareas automáticamente
 - FreeRTOS facilita la recreación de patrones polimétricos al permitir que múltiples tareas se ejecuten independientemente con sus propios intervalos de tiempo, sincronizándose automáticamente a través del scheduler
+
+##VIDEO
+Se evidencia el patron ritmico simulado:
+
+
+
+
+https://github.com/user-attachments/assets/b0f5d0f7-357b-4c58-a1eb-537ec0df443f
+
