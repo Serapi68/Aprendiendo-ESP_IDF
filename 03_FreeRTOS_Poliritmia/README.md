@@ -36,7 +36,7 @@ Cuando ambas tareas se ejecutan concurrentemente, crean una secuencia sincroniza
 - El scheduler de FreeRTOS cambia entre tareas automáticamente
 - FreeRTOS facilita la recreación de patrones polimétricos al permitir que múltiples tareas se ejecuten independientemente con sus propios intervalos de tiempo, sincronizándose automáticamente a través del scheduler
 
-##VIDEO
+## VIDEO
 Se evidencia el patron ritmico simulado:
 
 
