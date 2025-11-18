@@ -52,7 +52,7 @@ boton         B       3          460     7     0
 IDLE0         R       0          110     1     0
 IDLE1         B       0          110     2     1
 
-
+```markdown
 ## NOTAS IMPORTANTES
 
 -Es necesario abrir la configuración en ESP-IDF: SDK Configuration editor (menuconfig), ir a Component config → FreeRTOS → Kernel y habilitar Enable FreeRTOS stats formatting functions para que vTaskList() funcione.
