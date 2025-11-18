@@ -16,7 +16,6 @@ Tenemos varios archivos auxiliares como:
 
 En estos se implementa la lógica requerida, se verifica el envío de información entre núcleos y se crea un sistema para visualizar las tareas en ejecución mediante un buffer en el monitor de ESP-IDF, utilizando una cola Queue y funciones de FreeRTOS:
 
-```c
     contador_cola = xQueueCreate(10, sizeof(int)); // Se ubica en el archivo main.c
     xQueueSend(cola, &contador, portMAX_DELAY);     // Se enviará la información del contador
     xQueueReceive(cola, &valor_recibido, pdMS_TO_TICKS(10)) // Lo enviado se almacenará en valor_recibido, logrando la conexión
