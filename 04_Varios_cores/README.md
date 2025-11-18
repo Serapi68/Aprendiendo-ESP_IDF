@@ -42,6 +42,7 @@ Se utilizan las funciones de FreeRTOS como:
 
 
 # RESULTADO
+```c
 BOTÓN PULSADO → Mostrando Tareas:
 Nombre      Estado   Prioridad  Stack   Num   Core
 ------------------------------------------------------
