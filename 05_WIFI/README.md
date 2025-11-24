@@ -82,5 +82,7 @@ Los LEDs se encienden secuencialmente: el primer LED (GPIO 2) se activa con al m
 - Para el manejo de errores, se usa ESP_ERROR_CHECK() para verificar operaciones críticas.
 
 ## VIDEO
-Se evidencia la secuencia hecha: al conectar dispositivos al AP, los LEDs se encienden según el número de conexiones, y los logs muestran los eventos en tiempo real.
+Se evidencia la secuencia hecha: al conectar dispositivos al AP, los LEDs se encienden según el número de conexiones, y los logs muestran los eventos en tiempo real:
+
+Se evidencia en otro video que existe conexion local entre los dispositivos que se conectan a la red:
 
