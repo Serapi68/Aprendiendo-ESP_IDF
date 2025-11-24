@@ -28,7 +28,7 @@ Tenemos varios archivos auxiliares como:
 - luces.c
 
 En estos se implementa la lógica para configurar el WiFi AP, manejar eventos de conexión/desconexión, inicializar LEDs y actualizar su estado basado en el número de conexiones. Se utiliza una variable global conexiones para rastrear el número de estaciones conectadas y comunicarlo entre módulos.Se crean tareas que se ejecutan en núcleos específicos, mostrando un ejemplo:
-
+```c
     xTaskCreatePinnedToCore(
         wifi_init_ap,         // Función de la tarea
         "wifi_init_ap",       // Nombre de la tarea
@@ -47,17 +47,21 @@ Otro ejemplo para inicializar LEDs:
         NULL,                 // Puntero a la tarea creada
         0);                   // Core 0
 
+
+```
+```c
 Se utilizan funciones deESP-IDF y FreeRTOS como:
     
-    - esp_wifi_init() / esp_wifi_set_mode() / esp_wifi_set_config() / esp_wifi_start() - Para configurar y iniciar el AP WiFi.
-    - esp_event_handler_register() - Para registrar manejadores de eventos WiFi.
-    - gpio_set_direction() / gpio_set_level() - Para controlar los LEDs.
-    - xTaskCreatePinnedToCore() - Para crear tareas asignadas a núcleos específicos.
-    - vTaskDelete() - Para eliminar la tarea actual al finalizar su ejecución.
-    - vTaskDelay() - Para pausar la ejecución en el loop principal.
-    - ESP_LOGI() - Para imprimir logs en consola.
-    - nvs_flash_init() - Para inicializar el almacenamiento no volátil
-    
+    - esp_wifi_init() / esp_wifi_set_mode() / esp_wifi_set_config() / esp_wifi_start() // Para configurar y iniciar el AP WiFi.
+    - esp_event_handler_register() // Para registrar manejadores de eventos WiFi.
+    - gpio_set_direction() / gpio_set_level() // Para controlar los LEDs.
+    - xTaskCreatePinnedToCore() // Para crear tareas asignadas a núcleos específicos.
+    - vTaskDelete() // Para eliminar la tarea actual al finalizar su ejecución.
+    - vTaskDelay() // Para pausar la ejecución en el loop principal.
+    - ESP_LOGI() // Para imprimir logs en consola.
+    - nvs_flash_init() // Para inicializar el almacenamiento no volátil
+ 
+```   
 ## RESULTADO:
 
     WIFI AP: Punto de acceso iniciado. SSID:Jueguru, Contraseña:Jueguru123, Canal:4, Max Conexiones:4, Modo Autenticacion:3
