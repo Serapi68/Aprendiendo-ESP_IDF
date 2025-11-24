@@ -4,8 +4,8 @@ Proyecto en ESP32 que configura un punto de acceso WiFi (AP) y actualiza LEDs en
 
 ## Introducción Breve al WiFi AP
 En este proyecto para ESP32, se configura un Punto de Acceso WiFi (AP) que permite a otros dispositivos (como celulares o laptops) conectarse a él, formando una red local sin necesidad de un router externo:
-    - **Configuración Principal**: El AP se llama "Jueguru" con contraseña "Jueguru123", opera en el canal 4, soporta hasta 4 conexiones simultáneas y usa autenticación WPA/WPA2 para seguridad.
-    - **Funcionamiento**: Al iniciarse (en la tarea wifi_init_ap en el núcleo 1), registra eventos de conexión/desconexión. Cada conexión incrementa un contador global (conexiones), y cada desconexión lo decrementa. Esto actualiza LEDs: uno se enciende con ≥1 conexión (GPIO 2) y otro con ≥2 (GPIO 4).
+- **Configuración Principal**: El AP se llama "Jueguru" con contraseña "Jueguru123", opera en el canal 4, soporta hasta 4 conexiones simultáneas y usa autenticación WPA/WPA2 para seguridad.
+- **Funcionamiento**: Al iniciarse (en la tarea wifi_init_ap en el núcleo 1), registra eventos de conexión/desconexión. Cada conexión incrementa un contador global (conexiones), y cada desconexión lo decrementa. Esto actualiza LEDs: uno se enciende con ≥1 conexión (GPIO 2) y otro con ≥2 (GPIO 4).
 
 Esto se integra con inicialización de LEDs en el núcleo 0, todo orquestado desde main.c.
 
@@ -13,16 +13,17 @@ Esto se integra con inicialización de LEDs en el núcleo 0, todo orquestado des
 ## Beneficios
 
 Descripción de beneficios:
-    - **Facilidad de uso en IoT**: Ideal para crear redes locales privadas, como en proyectos de domótica o monitoreo, sin depender de infraestructura externa.
-    - **Eficiencia con FreeRTOS**: Permite multitarea en núcleos duales del ESP32, optimizando el rendimiento y separando lógica de WiFi y LEDs.
-    - **Visualización Intuitiva** : Los LEDs proporcionan feedback visual inmediato sobre el estado de conexiones, útil para depuración y demostraciones.
-    - **Seguridad Básica**: Usa autenticación WPA/WPA2 para proteger la red, y logs en consola para monitoreo en tiempo real.
-    -Escalabilidad: Fácil de expandir para más LEDs, conexiones o integraciones (ej. servidores web en el AP).
+- **Facilidad de uso en IoT**: Ideal para crear redes locales privadas, como en proyectos de domótica o monitoreo, sin depender de infraestructura externa.
+- **Eficiencia con FreeRTOS**: Permite multitarea en núcleos duales del ESP32, optimizando el rendimiento y separando lógica de WiFi y LEDs.
+- **Visualización Intuitiva** : Los LEDs proporcionan feedback visual inmediato sobre el estado de conexiones, útil para depuración y demostraciones.
+- **Seguridad Básica**: Usa autenticación WPA/WPA2 para proteger la red, y logs en consola para monitoreo en tiempo real.
+- **Escalabilidad**: Fácil de expandir para más LEDs, conexiones o integraciones (ej. servidores web en el AP).
 
 ## SECUENCIA DE CÓDIGO
 
 El proyecto contiene un archivo principal donde se inicializan los componentes:
 - main.c
+
 Tenemos varios archivos auxiliares como:
 - configuracion_wifi.c
 - luces.c
