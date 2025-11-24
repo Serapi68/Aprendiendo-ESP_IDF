@@ -49,9 +49,9 @@ Otro ejemplo para inicializar LEDs:
 
 
 ```
-```c
-Se utilizan funciones deESP-IDF y FreeRTOS como:
-    
+
+## HERRAMIENTAS de ESP-IDF y FreeRTOS usadas:
+   ```c 
     - esp_wifi_init() / esp_wifi_set_mode() / esp_wifi_set_config() / esp_wifi_start() // Para configurar y iniciar el AP WiFi.
     - esp_event_handler_register() // Para registrar manejadores de eventos WiFi.
     - gpio_set_direction() / gpio_set_level() // Para controlar los LEDs.
