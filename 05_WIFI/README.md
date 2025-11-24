@@ -38,7 +38,10 @@ En estos se implementa la lógica para configurar el WiFi AP, manejar eventos de
         5,                    // Prioridad de la tarea
         NULL,                 // Puntero a la tarea creada
         1);                   // Core 1 
-Otro ejemplo para inicializar LEDs:
+
+```
+__**Otro ejemplo para inicializar LEDs**__:
+   ```c 
     xTaskCreatePinnedToCore(
         inicia_leds,          // Función de la tarea
         "inicia_leds",        // Nombre de la tarea
