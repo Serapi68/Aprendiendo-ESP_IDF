@@ -142,8 +142,8 @@ static void event_handler(void* arg, esp_event_base_t event_base,
 
 **Configuración:**
 ```c
-#define CASA_SSID      "FAMILIA-GP"      // ← Cambiar por tu WiFi
-#define CASA_PASSWORD  "Gabi.2007+"      // ← Cambiar por tu contraseña
+#define CASA_SSID      "*******"      // ← Cambiar por tu WiFi
+#define CASA_PASSWORD  "*******"      // ← Cambiar por tu contraseña
 ```
 
 **Eventos Manejados:**
@@ -220,7 +220,7 @@ Esto asegura que cuando un dispositivo se conecta al AP, recibe:
 
 ---
 
-## 🚀 Configuración y Compilación
+##  Configuración y Compilación
 
 ### Requisitos Previos
 - ESP-IDF v5.5.1 o superior
