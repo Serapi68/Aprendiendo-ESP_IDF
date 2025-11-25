@@ -321,10 +321,10 @@ Ctrl + Shift + P → "ESP-IDF: Build your project"
 
 **Solución**: Usar la API correcta de lwIP:
 ```c
-// ❌ INCORRECTO:
+//  INCORRECTO:
 esp_netif_napt_enable(esp_netif_get_handle_from_ifkey("WIFI_AP_DEF"));
 
-// ✅ CORRECTO:
+//  CORRECTO:
 esp_netif_ip_info_t ap_ip_info;
 esp_netif_get_ip_info(ap_netif, &ap_ip_info);
 ip_napt_enable(ap_ip_info.ip.addr, 1);
@@ -381,7 +381,7 @@ grep "CONECTADO AL ROUTER" output.log  # Debe aparecer con IP válida
 
 ---
 
-## 🔍 Depuración Avanzada
+##  Depuración Avanzada
 
 ### Verificar Estado de NAT
 ```c
