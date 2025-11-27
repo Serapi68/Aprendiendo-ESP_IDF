@@ -7,8 +7,8 @@
 
 static const char *TAG = "WIFI STA";
 
-#define CASA_SSID      "FAMILIA-GP"
-#define CASA_PASSWORD  "Gabi.2007+"
+#define CASA_SSID      "****"
+#define CASA_PASSWORD  "****"
 
 static void event_handler(void* arg, esp_event_base_t event_base,
                           int32_t event_id, void* event_data)

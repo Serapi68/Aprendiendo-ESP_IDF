@@ -19,7 +19,7 @@ static void event_handler(void* arg, esp_event_base_t event_base,
         ESP_LOGI(TAG, "CONECTADO AL ROUTER");
         ESP_LOGI(TAG, "IP del ESP32: " IPSTR, IP2STR(&event->ip_info.ip));
 
-        // CORRECCIÓN: Obtener IP del AP correctamente
+        // Obtener IP del AP correctamente
         esp_netif_t *ap_netif = esp_netif_get_handle_from_ifkey("WIFI_AP_DEF");
         esp_netif_ip_info_t ap_ip_info;
         esp_netif_get_ip_info(ap_netif, &ap_ip_info);  // Pasar por referencia
