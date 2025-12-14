@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 - Control LED</title>
+    <style>
+        body {font-family: Arial, sans-serif; text-align: center; background: linear-gradient(#667eea, #764ba2); color: white; margin: 0; padding: 50px;}
+        h1 {font-size: 3em;}
+        button {margin: 30px; padding: 20px 50px; font-size: 1.8em; border: none; border-radius: 20px; background: #ff6b6b; color: white; cursor: pointer;}
+        button:hover {background: #ff5252;}
+        #estado {font-size: 2.2em; margin: 40px;}
+    </style>
+</head>
+<body>
+    <h1>ESP32 Web Server</h1>
+    <p>Control del LED GPIO2</p>
+    <button id="boton">LED GPIO2</button>
+    <p id="estado"> </p>
+
+    <script>
+        let encendido = false;                     
+
+        function toggle() {
+            encendido = !encendido;
+            const estado = document.getElementById("estado");
+            const boton = document.getElementById("boton");
+
+            if (encendido) {
+                estado.innerHTML = "Estado: <span style='color:lime'>ENCENDIDO</span>";
+                boton.style.background = "#4caf50";
+                fetch('/led?on');                 
+            } else {
+                estado.innerHTML = "Estado: <span style = 'color:red'>APAGADO</span>";
+                boton.style.background = "#ff6b6b";
+                fetch('/led?off');  
+            }              
+        }
+
+        
+        document.getElementById("boton").onclick = toggle;
+    </script>
+</body>
+</html>
