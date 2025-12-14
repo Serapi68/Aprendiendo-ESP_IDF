@@ -11,8 +11,8 @@
 #define WIFI_PASS_AP "12345678"
 
 //Configuracion de red Wi-Fi STA
-#define WIFI_SSID_STA "FAMILIA-GP" // Coloca el SSID de red Wi-Fi aquí
-#define WIFI_PASS_STA "Gabi.2007+" // Coloca la contraseña de red Wi-Fi aquí
+#define WIFI_SSID_STA "" // Coloca el SSID de red Wi-Fi aquí
+#define WIFI_PASS_STA "" // Coloca la contraseña de red Wi-Fi aquí
 
 //Credenciales para autenticación básica
 #define AUTH_USERNAME "YoSoyJueguru" 
